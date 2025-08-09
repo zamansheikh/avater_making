@@ -1,0 +1,26 @@
+[Unit]
+Description=Avatar Processing Django Backend
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/avater_making
+Environment=PATH=/root/avater_making/venv/bin
+ExecStart=/root/avater_making/venv/bin/python manage.py runserver 0.0.0.0:8000
+Restart=always
+RestartSec=10
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/root/avater_making
+
+# Environment variables
+Environment=DJANGO_SETTINGS_MODULE=avatar_backend.settings
+Environment=PYTHONPATH=/root/avater_making
+
+[Install]
+WantedBy=multi-user.target
