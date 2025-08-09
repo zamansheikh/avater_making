@@ -4,12 +4,12 @@ A professional Django REST API for processing user-uploaded images to create per
 
 ## 🚀 Quick Start
 
-**The backend is ready to use!** Server is running at: http://127.0.0.1:8000/
+**The backend is ready to use!** Server is running at: http://127.0.0.1:8989/
 
 ### Test the API:
-- **API Info**: http://127.0.0.1:8000/api/info/
-- **Health Check**: http://127.0.0.1:8000/api/health/
-- **Upload Endpoint**: `POST http://127.0.0.1:8000/api/process-avatar/`
+- **API Info**: http://127.0.0.1:8989/api/info/
+- **Health Check**: http://127.0.0.1:8989/api/health/
+- **Upload Endpoint**: `POST http://127.0.0.1:8989/api/process-avatar/`
 
 ## Features
 
@@ -30,7 +30,7 @@ POST /api/process-avatar/
 **Request Example:**
 ```bash
 curl -X POST \
-  http://127.0.0.1:8000/api/process-avatar/ \
+  http://127.0.0.1:8989/api/process-avatar/ \
   -H 'Content-Type: multipart/form-data' \
   -F 'image=@/path/to/your/image.jpg'
 ```
@@ -40,7 +40,7 @@ curl -X POST \
 {
     "success": true,
     "message": "Avatar processed successfully",
-    "processed_image_url": "http://127.0.0.1:8000/media/uploads/processed/avatar_123.png",
+    "processed_image_url": "http://127.0.0.1:8989/media/uploads/processed/avatar_123.png",
     "original_filename": "user_photo.jpg",
     "processing_details": {
         "cropped": true,
@@ -61,7 +61,7 @@ curl -X POST \
 const formData = new FormData();
 formData.append('image', imageFile);
 
-fetch('http://127.0.0.1:8000/api/process-avatar/', {
+fetch('http://127.0.0.1:8989/api/process-avatar/', {
     method: 'POST',
     body: formData
 })

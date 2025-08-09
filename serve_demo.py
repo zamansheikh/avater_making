@@ -11,7 +11,7 @@ import os
 from pathlib import Path
 
 # Get the directory where this script is located
-PORT = 3000
+PORT = 8989
 Handler = http.server.SimpleHTTPRequestHandler
 
 # Change to the project directory
@@ -21,8 +21,8 @@ os.chdir(project_dir)
 print(f"🌐 Starting HTTP server on port {PORT}...")
 print(f"📁 Serving files from: {project_dir}")
 print(f"🎭 Demo available at: http://localhost:{PORT}/demo.html")
-print(f"🔧 API server should be running at: http://127.0.0.1:8000/")
-print("\n🚀 Open http://localhost:3000/demo.html in your browser")
+print(f"🔧 API server should be running at: http://127.0.0.1:8989/")
+print("\n🚀 Open http://localhost:8989/demo.html in your browser")
 print("Press Ctrl+C to stop the server")
 
 try:

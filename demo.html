@@ -188,8 +188,8 @@
         <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; text-align: center;">
             <h3>🚀 API Endpoints</h3>
             <p><strong>Upload:</strong> <code>POST /api/process-avatar/</code></p>
-            <p><strong>Info:</strong> <a href="http://127.0.0.1:8000/api/info/" target="_blank">http://127.0.0.1:8000/api/info/</a></p>
-            <p><strong>Health:</strong> <a href="http://127.0.0.1:8000/api/health/" target="_blank">http://127.0.0.1:8000/api/health/</a></p>
+            <p><strong>Info:</strong> <a href="http://127.0.0.1:8989/api/info/" target="_blank">http://127.0.0.1:8989/api/info/</a></p>
+            <p><strong>Health:</strong> <a href="http://127.0.0.1:8989/api/health/" target="_blank">http://127.0.0.1:8989/api/health/</a></p>
         </div>
     </div>
 
@@ -237,7 +237,7 @@
                 const formData = new FormData();
                 formData.append('image', file);
                 
-                const response = await fetch('http://127.0.0.1:8000/api/process-avatar/', {
+                const response = await fetch('http://127.0.0.1:8989/api/process-avatar/', {
                     method: 'POST',
                     body: formData
                 });
