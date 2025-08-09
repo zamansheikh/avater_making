@@ -1,0 +1,6 @@
+/.env
+/.github
+/.venv
+/.vscode
+
+/media/
