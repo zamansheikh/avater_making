@@ -92,6 +92,7 @@ python_run.bat manage.py runserver
 - OpenCV for advanced image processing
 - rembg for background removal
 - python-dotenv for environment management
+- **CORS enabled** - Works from any domain/origin
 
 ## Configuration
 
@@ -101,6 +102,7 @@ Configure the following environment variables in `.env`:
 - `ALLOWED_HOSTS`: Comma-separated list of allowed hosts
 - `MEDIA_ROOT`: Path for media files storage
 - `MAX_UPLOAD_SIZE`: Maximum file upload size in bytes
+- `CORS_ALLOW_ALL_ORIGINS`: Set to true for unrestricted access
 
 ## Security Features
 
